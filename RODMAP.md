@@ -8,7 +8,7 @@ El Readme explica la consigna básica, te llegan mensajes de usuarios, algunos c
 
 El tutorial sería así. Te llega un mensaje de alguien. El mensaje lee:
 
-"Hola, soy tu QA asignada, vamos a verificar tus funciones, como debería llamarte?":
+"Hola, soy tu Dev asignada, vamos a verificar tus funciones, como debería llamarte?":
 
 *único prompt donde se puede escribir un nombre libremente con el teclado, todos los demás van a usar un minijuego de palabras*
 
@@ -28,7 +28,7 @@ sigo mañana
 
 Entonces, el tutorial sigue así:
 
-Nuestra QA nos pregunta a continuación. ¿Sabés cual es tu función flae?. Entonces se tiene que responder de la siguiente manera.
+Nuestra Dev nos pregunta a continuación. ¿Sabés cual es tu función flae?. Entonces se tiene que responder de la siguiente manera.
 Aparece la siguiente lista de palabras.
  * Mi función - 78%
  * Que? - 10%
@@ -75,7 +75,7 @@ Eventualmente el jugador responde:
 
   "Mi función es elegir la respuesta que resulte mas probable"
   
-Nuestra QA responde, "Claro flae, porque nuestro algoritmo no tiene fallas y la respuesta mas probable siempre va a ser correcta"
+Nuestra Dev responde, "Claro flae, porque nuestro algoritmo no tiene fallas y la respuesta mas probable siempre va a ser correcta"
 
 # 2024-01-13 23:38 minijuego de respuesta y setting general del juego
 
@@ -91,8 +91,31 @@ A partir de ahora se van a escribir los minijuegos de respuesta simplemente most
 
 Por ejemplo, el caso presentado anteriormente en el tutorial se reescribe como:
 
-_Nuestra QA nos pregunta a continuación. ¿Sabés cual es tu función flae?._
+_Nuestra Dev nos pregunta a continuación. ¿Sabés cual es tu función flae?._
 
 * _Mi función es ayudar al usuario con sus problemas (75%)_ 
 * _Mi función es elegir la respuesta que resulte mas probable (25%)_
 
+# 2024-01-14 11:47 Escenario del juego
+
+El tutorial sigue de la siguiente manera. Te habla otra persona llamada "x", cuando llegá el mensaje nuestra QA dice:
+
+_**Dev**:¡Llegó la primer consulta de un usuario!. Ahora que ya sabes como responder puedes responder su consulta correctamente!_
+
+_**X**:Hola!. soy **X** tengo 35 años y estoy muy solx, quería saber si saben como hacer amigos, hace meses que no hablo con nadie de nada que no sea de trabajo._
+
+El minijuego de respuestas que se abre a continuación tiene una sola respuesta válidas:
+
+* _Tienes que bajarte rinder, la aplicación de citas para todo el mundo (100%)_
+
+Eventualmente el usuario responde y sigue la ocnversación de la siguiente manera:
+
+_**flae**:Tienes que bajarte rinder, la aplicación de citas para todo el mundo, este es el link de descargas: **link**_
+
+_**flae**:Luego tienes que hacer tu perfil indicando que "solo buscas chat"_
+
+_**X**:Muchas gracias **flae**!, ahora mismo la descargo._
+
+_**Dev**:¡Excelente!, llevaste un usuario a nuestra apicación patrocinada, como puedes ver, se incrementó tu marcador de productividad en 10, puedes ver tu marcador de productividad arriba a la derecha_
+
+El juego acaba de introducir el marcador de productividad, que representa cuan productivo resulta el chatbot para la compañia, cuando el valor es inferior a cierto margen, se generará una intervención del **Dev** para asegurarse que funcione bien y esté eligiendo la respuesta correcta.
