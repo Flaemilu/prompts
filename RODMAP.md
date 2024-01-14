@@ -1,4 +1,5 @@
-# 2024-01-08 23:12 Prompts.
+# 2024-01-08 23:12 
+## Prompts.
 
 Recién escribí un README para un videojuego. La idea es hacerlo como vaya saliendo, si es que sale y según el tiempo que me enganche en esto.
 
@@ -24,7 +25,8 @@ Minijuego de palabras. Tiene como única respuesta válida, "Soy flae, tu asiste
 
 sigo mañana
 
-# 2024-01-13 1:22 está Jere.
+# 2024-01-13 1:22
+## está Jere.
 
 Entonces, el tutorial sigue así:
 
@@ -77,7 +79,8 @@ Eventualmente el jugador responde:
   
 Nuestra Dev responde, "Claro flae, porque nuestro algoritmo no tiene fallas y la respuesta mas probable siempre va a ser correcta"
 
-# 2024-01-13 23:38 minijuego de respuesta y setting general del juego
+# 2024-01-13 23:38 
+## minijuego de respuesta y forma general del juego
 
 La idea es que las respuestas posibles en los minijuegos de respuesta van a estar predefinidas.
 
@@ -96,7 +99,8 @@ _Nuestra Dev nos pregunta a continuación. ¿Sabés cual es tu función flae?._
 * _Mi función es ayudar al usuario con sus problemas (75%)_ 
 * _Mi función es elegir la respuesta que resulte mas probable (25%)_
 
-# 2024-01-14 11:47 Escenario del juego
+# 2024-01-14 11:47 
+## escenario del juego
 
 El tutorial sigue de la siguiente manera. Te habla otra persona llamada "x", cuando llegá el mensaje nuestra QA dice:
 
