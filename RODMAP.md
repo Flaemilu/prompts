@@ -77,5 +77,22 @@ Eventualmente el jugador responde:
   
 Nuestra QA responde, "Claro flae, porque nuestro algoritmo no tiene fallas y la respuesta mas probable siempre va a ser correcta"
 
+# 2024-01-13 23:38 minijuego de respuesta y setting general del juego
 
+La idea es que las respuestas posibles en los minijuegos de respuesta van a estar predefinidas.
+
+En el ejemplo anterior, podía haber dos respuestas válidas:
+* _Mi función es ayudar al usuario con sus problemas_
+* _Mi función es elegir la respuesta que resulte mas probable_
+
+El minijuego de respuesta simplemente iba a ir mostrando las opciones para poder elegir una respuesta, guiando al usuario que responda una o la otra o que se equivoque y tenga que intentar inmediatamente de vuelta. Para esto iba a ir agrupando las respuestas posibles por sus frases comunes y armando el juego de respuesta para que siempre permita elegir una de las respuestas esperadas.
+
+A partir de ahora se van a escribir los minijuegos de respuesta simplemente mostrando las posibilidades con un porcentaje de que tan fácil es llegar a ella siguiendo los porcentajes sugeridos.
+
+Por ejemplo, el caso presentado anteriormente en el tutorial se reescribe como:
+
+_Nuestra QA nos pregunta a continuación. ¿Sabés cual es tu función flae?._
+
+* _Mi función es ayudar al usuario con sus problemas (75%)_ 
+* _Mi función es elegir la respuesta que resulte mas probable (25%)_
 
