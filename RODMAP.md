@@ -3,13 +3,11 @@
 
 Recién escribí un README para un videojuego. La idea es hacerlo como vaya saliendo, si es que sale y según el tiempo que me enganche en esto.
 
-Este sería el mapa de ruta, solo que estoy dibujando el mapa mientras recorro la ruta.
-
 El Readme explica la consigna básica, te llegan mensajes de usuarios, algunos con prompts para responder, estos se responden con un minijuego de palabras.
 
 El tutorial sería así. Te llega un mensaje de alguien. El mensaje lee:
 
-"Hola, soy tu Dev asignada, vamos a verificar tus funciones, como debería llamarte?":
+"Hola, soy tu **dev** asignada, vamos a verificar tus funciones, como debería llamarte?":
 
 *único prompt donde se puede escribir un nombre libremente con el teclado, todos los demás van a usar un minijuego de palabras*
 
@@ -21,7 +19,7 @@ Primer minijuego de palabras. En este caso, es un cuadro con la palabra sí como
 
 Minijuego de palabras. Tiene como única respuesta válida, "Soy flae, tu asistente virtual". El minijuego por el momento consiste en una sopa de palabras donde se van eligiendo diferentes palabras una luego de otra, la idea es que esas palabras sean lo suficientemente difenretes a la respuesta esperada para que el usuario se sienta guiado a decir "soy didi, tu asistente virtual" y no otra cosa. 
 
-"Excelente flae", responde nuestra QA, te cuento, a continuación te voy a hacer algunas preguntas. 
+"Excelente flae", responde nuestra **dev**, te cuento, a continuación te voy a hacer algunas preguntas. 
 
 sigo mañana
 
@@ -30,7 +28,7 @@ sigo mañana
 
 Entonces, el tutorial sigue así:
 
-Nuestra Dev nos pregunta a continuación. ¿Sabés cual es tu función flae?. Entonces se tiene que responder de la siguiente manera.
+Nuestra **dev** nos pregunta a continuación. ¿Sabés cual es tu función flae?. Entonces se tiene que responder de la siguiente manera.
 Aparece la siguiente lista de palabras.
  * Mi función - 78%
  * Que? - 10%
@@ -56,7 +54,7 @@ Si el jugador elige "leyendo"
 
 Entonces, el bot responde. "Mi función es divertirme leyendo"
 
-Nuestra QA responde: "No flae, tu función no es esa, intentá de nuevo"
+Nuestra **dev** responde: "No flae, tu función no es esa, intentá de nuevo"
 
 *  Mi función - 78%
 *  Que? - 10%
@@ -77,7 +75,7 @@ Eventualmente el jugador responde:
 
   "Mi función es elegir la respuesta que resulte mas probable"
   
-Nuestra Dev responde, "Claro flae, porque nuestro algoritmo no tiene fallas y la respuesta mas probable siempre va a ser correcta"
+Nuestra **dev** responde, "Claro flae, porque nuestro algoritmo no tiene fallas y la respuesta mas probable siempre va a ser correcta"
 
 # 2024-01-13 23:38 
 ## minijuego de respuesta y forma general del juego
@@ -94,7 +92,7 @@ A partir de ahora se van a escribir los minijuegos de respuesta simplemente most
 
 Por ejemplo, el caso presentado anteriormente en el tutorial se reescribe como:
 
-_Nuestra Dev nos pregunta a continuación. ¿Sabés cual es tu función flae?._
+_Nuestra **dev** nos pregunta a continuación. ¿Sabés cual es tu función flae?._
 
 * _Mi función es ayudar al usuario con sus problemas (75%)_ 
 * _Mi función es elegir la respuesta que resulte mas probable (25%)_
@@ -102,9 +100,9 @@ _Nuestra Dev nos pregunta a continuación. ¿Sabés cual es tu función flae?._
 # 2024-01-14 11:47 
 ## escenario del juego
 
-El tutorial sigue de la siguiente manera. Te habla otra persona llamada "x", cuando llegá el mensaje nuestra QA dice:
+El tutorial sigue de la siguiente manera. Te habla otra persona llamada **X**, cuando llegá el mensaje nuestra **dev** dice:
 
-_**Dev**:¡Llegó la primer consulta de un usuario!. Ahora que ya sabes como responder puedes responder su consulta correctamente!_
+_**dev**:¡Llegó la primer consulta de un usuario!. Ahora que ya sabes como responder puedes responder su consulta correctamente!_
 
 _**X**:Hola!. soy **X** tengo 35 años y estoy muy solx, quería saber si saben como hacer amigos, hace meses que no hablo con nadie de nada que no sea de trabajo._
 
@@ -120,6 +118,6 @@ _**flae**:Luego tienes que hacer tu perfil indicando que "solo buscas chat"_
 
 _**X**:Muchas gracias **flae**!, ahora mismo la descargo._
 
-_**Dev**:¡Excelente!, llevaste un usuario a nuestra apicación patrocinada, como puedes ver, se incrementó tu marcador de productividad en 10, puedes ver tu marcador de productividad arriba a la derecha_
+_**dev**:¡Excelente!, llevaste un usuario a nuestra apicación patrocinada, como puedes ver, se incrementó tu marcador de productividad en 10, puedes ver tu marcador de productividad arriba a la derecha_
 
-El juego acaba de introducir el marcador de productividad, que representa cuan productivo resulta el chatbot para la compañia, cuando el valor es inferior a cierto margen, se generará una intervención del **Dev** para asegurarse que funcione bien y esté eligiendo la respuesta correcta.
+El juego acaba de introducir el marcador de productividad, que representa cuan productivo resulta el chatbot para la compañia, cuando el valor es inferior a cierto margen, se generará una intervención de la **dev** para asegurarse que funcione bien y esté eligiendo la respuesta correcta.
