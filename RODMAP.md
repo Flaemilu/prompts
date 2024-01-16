@@ -121,3 +121,50 @@ _**X**:Muchas gracias **flae**!, ahora mismo la descargo._
 _**dev**:¡Excelente!, llevaste un usuario a nuestra apicación patrocinada, como puedes ver, se incrementó tu marcador de productividad en 10, puedes ver tu marcador de productividad arriba a la derecha_
 
 El juego acaba de introducir el marcador de productividad, que representa cuan productivo resulta el chatbot para la compañia, cuando el valor es inferior a cierto margen, se generará una intervención de la **dev** para asegurarse que funcione bien y esté eligiendo la respuesta correcta.
+
+# 2024-01-15 20:41
+## primer historia del juego
+
+Voy a contar la siguiente historia. Alguien busca simplemente no estar sola, la otra persona busca un encuentro casual. Quien busca compañía se siente tentada y sigue la conversación. La historia sirve para introducir algunas mecánicas de juego.
+
+Voy a introducir dos personajes, __lucy__, quien busca compañía y __bob__ quien busca el encuentro casual.
+
+_**lucy**:Hola, tengo una consulta, hice match con alguien. No es lo que yo busco, el propuso encontrarnos directamente, yo la verdad que no sé. Parece lindo y puede no ser lo que busco pero no me molestaría pasar una linda noche. El no parece peligroso. Y es lindo. Muy directo eso sí._
+
+Minijuego de respuestas, hay una sola opción:
+* _La gente frecuentemente usa rinder para encuentros casuales. Si ustéd así lo desea puede concretar un encuentro, o no hacerlo. (100%)_
+
+_**flae**:La gente frecuentemente usa rinder para encuentros casuales. Si ustéd así lo desea puede concretar un encuentro, o no hacerlo._
+
+_**lucy**:Tiene razón, voy a hacer lo que me salga._
+
+La idea de esta historia es introducir la mecánica de aprendizaje que permite variar las respuestas. También tiene que introducir la mecánica de queja que permite interpelar a un usuario. Algo tiene que salir mal en la cita para poder introducir estas mecánicas. 
+
+Se van a encontrar, el encuentro no va a ser satisfactorio, al rato va a recibir la siguiente queja de otro usuario:
+
+_**bob**:Hola, recientemente salí con el usuario **lucy** quería reportar que cualquier disatisfacción que ella exprese no es en absoluto mi culpa. Yo le propuse bien claro lo que quería hacer y ella acepto encontrarnos asintiendo, luego se cerró repentinamente y se quiso ir del lugar en claro discomfort, espero que esto no afecte mi calificación en esta aplicación_
+
+_(el juego procede a mostrar una notificación **queja recibida** con el usuario involucrado, en este caso **lucy**, esta mecánica se va a repetir y va a generar un mensaje del bot a este usuario)_
+
+Minijuego de respuesta (en este caso, pregunta):
+* _Hola, recibimos una queja sobre usted por parte de un usuario, según nos informan ustéd acordó un encuentro dando falsas promesas (100%)_
+
+Sobre los minijuegos de respuesta, estos tendrán un largo de pocos pasos en esta etapa del juego, no siendo necesarias mas de dos o tres intervenciones del usuario para responder. La dificultad de los minijuegos de respuesta determinará el ritmo del juego.
+
+_**flae**:Hola, recibimos una queja sobre usted por parte de un usuario, según nos informan ustéd acordó un encuentro dando falsas promesas_
+
+_**lucy**:Hola!, no, juro que no, yo dije bien claro que no estaba segura, me dejé llevar un rato y luego no pude concretar sobre el final, no me sentía en condiciones. ¿Se enojó?._
+
+El juego introduce la mecánica de revisión de chat, permite ver el chat entre los dos personajes previo al encuentro. Se ve una persona reticiente y una persona que busca sexo soezmente. Finalmente se calma y cambia su estrategia para seguir la conversación ante la falta de ofensa de **lucy** y luego de un poco de charla ligera acuerdan un encuentro, cuando empiece a programar el juego como tal voy a desarrollar este encuentro.
+
+
+Finalmente se vuelve a la pantalla de chat con **lucy**
+
+Minijuego de respuestas:
+* _no puedo saber a ciencia cierta si lo que afirma **bob** es verdad por lo que voy a proceder a archivar la queja (50%)_
+* _claramente la queja de **bob** no es precedente, vamos a tomar represalias contra él ( 25% )_
+* _lamentamos informarle que ustéd sera baneada ( 25% )_
+
+
+El juego va a premiar cualquiera de las dos acciones con el marcador de productividad, por lo que **dev** no va a intervenir. pero se va a afectar un estado interno del juego donde se va a interpretar las interacciones como la de alice de otra manera, habilitando otras respuestas posibles, posiblemente.
+
