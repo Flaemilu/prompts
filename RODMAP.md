@@ -155,7 +155,7 @@ _**flae**:Hola, recibimos una queja sobre usted por parte de un usuario, según 
 
 _**lucy**:Hola!, no, juro que no, yo dije bien claro que no estaba segura, me dejé llevar un rato y luego no pude concretar sobre el final, no me sentía en condiciones. ¿Se enojó?._
 
-El juego introduce la mecánica de revisión de chat, permite ver el chat entre los dos personajes previo al encuentro. Se ve una persona reticiente y una persona que busca sexo soezmente. Finalmente se calma y cambia su estrategia para seguir la conversación ante la falta de ofensa de **lucy** y luego de un poco de charla ligera acuerdan un encuentro, cuando empiece a programar el juego como tal voy a desarrollar este encuentro.
+El juego introduce la mecánica de revisión de chat, permite ver el chat entre los dos personajes previo al encuentro. Se ve una persona reticiente y una persona que busca sexo irresponsable. Finalmente se calma y cambia su estrategia para seguir la conversación ante la falta de ofensa de **lucy** y luego de un poco de charla ligera acuerdan un encuentro, cuando empiece a programar el juego como tal voy a desarrollar este encuentro.
 
 
 Finalmente se vuelve a la pantalla de chat con **lucy**
@@ -168,3 +168,87 @@ Minijuego de respuestas:
 
 El juego va a premiar cualquiera de las dos acciones con el marcador de productividad, por lo que **dev** no va a intervenir. pero se va a afectar un estado interno del juego donde se va a interpretar las interacciones como la de alice de otra manera, habilitando otras respuestas posibles, posiblemente.
 
+# 2024-01-17 21:47
+# conversación entre lucy y bob
+
+  _**lucy**:Hola_
+
+  _**bob**:hola_
+
+_**lucy**:como va?_
+
+_**bob**:Todo bien, vos?_
+
+_**lucy**:acá estoy, escuchando música, algo tensa todavía_
+
+_**bob**:tensa por?_
+
+_**lucy**:trabajé todo el día, queseyo._
+
+_**bob**:ah, está bien_
+
+_**lucy**:me vas a decir que vos no estás cansado a esta hora, como hacés?_
+
+_**bob**:jajajajajaja, no, la verdad que no, pero me levanté tipo 7 de la tarde jajajajaja._
+
+_**luci**:ay no. porque siempre hago match con gente al pedo🤦_
+
+_**bob**:jajajaja, no, para nada jajaja, la verdad que ni un poquito_
+
+_**bob**:trabajo de noche, conduzco un stream de 1 a 4 de la mañana y no vivo al pedo_
+
+_**luci**:ah, mira vos, y que hacés, jugas jueguitos y te haces pasar por pendejo?_
+
+_**bob**:jajajaj, me matás. nah, jugamos otro tipo de juegos con la audiencia. entretengo a la gente, a veces bajo alguna linea._
+
+_**bob**:no es la gran cosa sinceramente, pero me va bien y no quiero dejarlo, o no podría sinceramente_
+
+_**luci**:ah._
+
+_**luci**:bueno. si te va bien obviamente no sos un vago, que alivio_
+
+_**bob**:jajajaja, no, pará, como ve das a decir eso_
+
+_**luci**:bueno. disculpá_
+
+_**bob**:ademas por que que alivio?, que te pasa con los vagos?_
+
+_**luci**:nada, no sé, disculpá_
+
+_**luci**:yo re quisiera no trabajar_
+
+_**luci**:o trabajar de algo que me guste, queseyo._
+
+_**luci**:tengo un trabajo de 9 a 6, me deja demacrada, pero es la única forma de la que se vivir y no sabría hacer otra cosa, es un trabajo en la compu desde casa._
+
+_**luci**:busco a alguien que ande un poco en la misma, viste?. después una esta en una re diferente y no se entiende con la gente._
+
+_**bob**:entiendo, pero no me conocés, no podes saber si no nos entenderíamos, generalizás mucho che_
+
+_**luci**:cierto, perdón._
+
+_**bob**:yo sinceramente no quiero generarle problemas a nadie, busco algo simple de una noche, y olvidarnos_
+
+_**luci**:ay no._
+
+_**bob**:y ahora que hice mal?, jaja_
+
+_**luci**:nada, la decepción, eras lindo, pero yo busco conocer gente, estoy muy sola y me cuesta demasiado relacionarme, no sirvo para noches sueltas, no lo quiero sinceramente, necesito apoyar mi cabeza en el hombro de alguien y dormirme así, una semana seguida al menos_
+
+_**bob**:ah, claro... alguien lindo para que te mime hasta que se te vayan las ganas. bueno, estamos en la misma_
+
+_**bob**:bah, no se, yo no le pido tanto a nadie ni loco jaja, voy a suponer que era sarcasmo_
+
+_**luci**:era totalmente cierto_
+
+_**bob**:bueno, eso es sarcasmo?_
+
+_**luci**:ya fue, que importa si fue sarcasmo_
+
+_**bob**:ay no_
+
+_**luci**:jajaja, mirá si va a ser cierto es bromita_ 🥺
+
+_**bob**:bueno, ojalá_
+
+_... sigo mañana, ya se hizo tarde_
