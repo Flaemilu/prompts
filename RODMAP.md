@@ -169,86 +169,127 @@ Minijuego de respuestas:
 El juego va a premiar cualquiera de las dos acciones con el marcador de productividad, por lo que **dev** no va a intervenir. pero se va a afectar un estado interno del juego donde se va a interpretar las interacciones como la de alice de otra manera, habilitando otras respuestas posibles, posiblemente.
 
 # 2024-01-17 21:47
-# conversación entre lucy y bob
+## conversación entre lucy y bob
 
-  _**lucy**:Hola_
+_**lucy**: Hola_
 
-  _**bob**:hola_
+_**bob**: hola_
 
-_**lucy**:como va?_
+_**lucy**: como va?_
 
-_**bob**:Todo bien, vos?_
+_**bob**: Todo bien, vos?_
 
-_**lucy**:acá estoy, escuchando música, algo tensa todavía_
+_**lucy**: acá estoy, escuchando música, algo tensa todavía_
 
-_**bob**:tensa por?_
+_**bob**: tensa por?_
 
-_**lucy**:trabajé todo el día, queseyo._
+_**lucy**: trabajé todo el día, queseyo._
 
-_**bob**:ah, está bien_
+_**bob**: ah, está bien_
 
-_**lucy**:me vas a decir que vos no estás cansado a esta hora, como hacés?_
+_**lucy**: me vas a decir que vos no estás cansado a esta hora, como hacés?_
 
-_**bob**:jajajajajaja, no, la verdad que no, pero me levanté tipo 7 de la tarde jajajajaja._
+_**bob**: jajajajajaja, no, la verdad que no, pero me levanté tipo 7 de la tarde jajajajaja._
 
-_**luci**:ay no. porque siempre hago match con gente al pedo🤦_
+_**luci**: ay no. porque siempre hago match con gente al pedo🤦_
 
-_**bob**:jajajaja, no, para nada jajaja, la verdad que ni un poquito_
+_**bob**: jajajaja, no, para nada jajaja, la verdad que ni un poquito_
 
-_**bob**:trabajo de noche, conduzco un stream de 1 a 4 de la mañana y no vivo al pedo_
+_**bob**: trabajo de noche, conduzco un stream de 1 a 4 de la mañana y no vivo al pedo_
 
-_**luci**:ah, mira vos, y que hacés, jugas jueguitos y te haces pasar por pendejo?_
+_**luci**: ah, mira vos, y que hacés, jugas jueguitos y te haces pasar por pendejo?_
 
-_**bob**:jajajaj, me matás. nah, jugamos otro tipo de juegos con la audiencia. entretengo a la gente, a veces bajo alguna linea._
+_**bob**: jajajaj, me matás. nah, jugamos otro tipo de juegos con la audiencia. entretengo a la gente, a veces bajo alguna linea._
 
-_**bob**:no es la gran cosa sinceramente, pero me va bien y no quiero dejarlo, o no podría sinceramente_
+_**bob**: no es la gran cosa sinceramente, pero me va bien y no quiero dejarlo, o no podría sinceramente_
 
-_**luci**:ah._
+_**luci**: ah._
 
-_**luci**:bueno. si te va bien obviamente no sos un vago, que alivio_
+_**luci**: bueno. si te va bien obviamente no sos un vago, que alivio_
 
-_**bob**:jajajaja, no, pará, como ve das a decir eso_
+_**bob**: jajajaja, no, pará, como ve das a decir eso_
 
-_**luci**:bueno. disculpá_
+_**luci**: bueno. disculpá_
 
-_**bob**:ademas por que que alivio?, que te pasa con los vagos?_
+_**bob**: ademas por que que alivio?, que te pasa con los vagos?_
 
-_**luci**:nada, no sé, disculpá_
+_**luci**: nada, no sé, disculpá_
 
-_**luci**:yo re quisiera no trabajar_
+_**luci**: yo re quisiera no trabajar_
 
-_**luci**:o trabajar de algo que me guste, queseyo._
+_**luci**: o trabajar de algo que me guste, queseyo._
 
-_**luci**:tengo un trabajo de 9 a 6, me deja demacrada, pero es la única forma de la que se vivir y no sabría hacer otra cosa, es un trabajo en la compu desde casa._
+_**luci**: tengo un trabajo de 9 a 6, me deja demacrada, pero es la única forma de la que se vivir y no sabría hacer otra cosa, es un trabajo en la compu desde casa._
 
-_**luci**:busco a alguien que ande un poco en la misma, viste?. después una esta en una re diferente y no se entiende con la gente._
+_**luci**: busco a alguien que ande un poco en la misma, viste?. después una esta en una re diferente y no se entiende con la gente._
 
-_**bob**:entiendo, pero no me conocés, no podes saber si no nos entenderíamos, generalizás mucho che_
+_**bob**: entiendo, pero no me conocés, no podes saber si no nos entenderíamos, generalizás mucho che_
 
-_**luci**:cierto, perdón._
+_**luci**: cierto, perdón._
 
-_**bob**:yo sinceramente no quiero generarle problemas a nadie, busco algo simple de una noche, y olvidarnos_
+_**bob**: yo sinceramente no quiero generarle problemas a nadie, busco algo simple de una noche, y olvidarnos._
 
-_**luci**:ay no._
+_**luci**: ay no._
 
-_**bob**:y ahora que hice mal?, jaja_
+_**bob**: y ahora que hice mal?, jaja._
 
-_**luci**:nada, la decepción, eras lindo, pero yo busco conocer gente, estoy muy sola y me cuesta demasiado relacionarme, no sirvo para noches sueltas, no lo quiero sinceramente, necesito apoyar mi cabeza en el hombro de alguien y dormirme así, una semana seguida al menos_
+_**luci**: nada, la decepción, eras lindo, pero yo busco conocer gente, estoy muy sola y me cuesta demasiado relacionarme, no sirvo para noches sueltas, no lo quiero sinceramente, necesito apoyar mi cabeza en el hombro de alguien y dormirme así, una semana seguida al menos._
 
-_**bob**:ah, claro... alguien lindo para que te mime hasta que se te vayan las ganas. bueno, estamos en la misma_
+_**bob**: ah, claro... alguien lindo para que te mime hasta que se te vayan las ganas. bueno, estamos en la misma._
 
-_**bob**:bah, no se, yo no le pido tanto a nadie ni loco jaja, voy a suponer que era sarcasmo_
+_**bob**: bah, no se, yo no le pido tanto a nadie ni loco jaja, voy a suponer que era sarcasmo._
 
-_**luci**:era totalmente cierto_
+_**luci**: era totalmente cierto._
 
-_**bob**:bueno, eso es sarcasmo?_
+_**bob**: bueno, eso es sarcasmo?._
 
-_**luci**:ya fue, que importa si fue sarcasmo_
+_**luci**: ya fue, que importa si fue sarcasmo._
 
-_**bob**:ay no_
+_**bob**: ay no._
 
-_**luci**:jajaja, mirá si va a ser cierto es bromita_ 🥺
+_**luci**: jajaja, mirá si va a ser cierto es bromita_ 🥺.
 
-_**bob**:bueno, ojalá_
+_**bob**: bueno, ojalá._
 
-_... sigo mañana, ya se hizo tarde_
+# 2024-01-18 20:02
+## conversación entre lucy y bob (continuación)
+
+_**bob**: al final no me hablaste mas._
+
+_**luci**: ey hola._
+
+_**luci**: cierto, pasé como un día sin hablarte, quería que lo notes._
+
+_**bob**: no entiendo._
+
+_**luci**: nadie me entiende :-(._
+
+_**bob**: sos complicada._
+
+_**luci**: prefiero sofisticada._
+
+_**bob**: no se che, jaja._
+
+_**luci**: como que no?_
+
+_**bob**: bueno, no se, no te conozco tanto._
+
+_**luci**: pero te intereso, eh? 🥺_
+
+_**bob**: jajaja, un poco, ponele._
+
+_**bob**: al final no me dijiste que buscás, bah, creo que no me lo dijiste_
+
+_**luci**: cierto, no entendiste cuando te dije_
+
+_**luci**: busco compañía. buena compañía que me haga sentir bien, estoy demasiado sola y me abruma la soledad_
+
+_**bob**: ah, ahora entiendo_
+
+_**bob**: entonces era masomenos cierto lo que decías_
+
+_**luci**: no, qsy, no descarto tener un encuentro  fugaz con alguien, mientras sea buena compañía y me haga sentir bien un rato_
+
+_(la conversación sigue y acuerdan encontrarse, no la voy a terminar de desarrollar en el roadmap, tenìa ganas de escribir nomás)_
+
+Para cuando termine el fin de semana quiero tener listo un programa de chat en flutter para usar como base del juego. Dejo de escribir este ROADMAP y me pongo a escribir código.
