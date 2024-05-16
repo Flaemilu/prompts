@@ -17,7 +17,7 @@ Primer minijuego de palabras. En este caso, es un cuadro con la palabra sí como
 
 "Excelente flae, te cuento, yo te voy a hacer algunas preguntas y vos me tenés que responder correctamente para poder verificar tus funciones. Empecemos por la primera. Quien eres?"
 
-Minijuego de palabras. Tiene como única respuesta válida, "Soy flae, tu asistente virtual". El minijuego por el momento consiste en una sopa de palabras donde se van eligiendo diferentes palabras una luego de otra, la idea es que esas palabras sean lo suficientemente difenretes a la respuesta esperada para que el usuario se sienta guiado a decir "soy didi, tu asistente virtual" y no otra cosa. 
+Minijuego de palabras. Tiene como única respuesta válida, "Soy flae, tu asistente virtual". El minijuego por el momento consiste en una sopa de palabras donde se van eligiendo diferentes palabras una luego de otra, la idea es que esas palabras sean lo suficientemente difenretes a la respuesta esperada para que el usuario se sienta guiado a decir "soy flae, tu asistente virtual" y no otra cosa. 
 
 "Excelente flae", responde nuestra **dev**, te cuento, a continuación te voy a hacer algunas preguntas. 
 

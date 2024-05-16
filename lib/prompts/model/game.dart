@@ -5,54 +5,54 @@ class Game{
     
     -inicio
     -primer desicion, si bannear a lucy o a bob
-    -chat de bob con lori       - chat de lucy con bill
+    -chat de bob con lily       - chat de lucy con bill
     -final de bob                  -final de lucy.
 
-    Entonces, La historia de va a componer de escenas que se conectan entre sí
-    como si fuera un arbol, sólo que el jugador recorre un camino dentro del arbol
-    para completar su historia.
-
-    Entonces, quien escribe el juego va a ir escribiendo escenas de la siguiente 
-    manera:
-
-        Una escena consiste en un setup seguido por un minijuego de respuestas,
-      entonces se construyen mediante un builder con la siguiente forma:
-        val inicio = [
-          prompt(new Prompt(
-            dev,
-            "Hola, soy tu **dev** asignada, vamos a verificar tus funciones, como debería llamarte?"
-          ),
-          nameChooser("botname")
-        ]
-        val entiendeMinigame = 
+    el siguiente pseudocòdigo se utilizarà para describir el juego
+    
+    var prompts = new Game();
+    prompts.define(
+        "begin_prompts", //label de la escena, es un nombre sin significado para identificarla
         [
-          prompt(new Prompt(
-            dev,
-            ""Bien, bien. Hola "{{botname}}", puedes entender lo que digo?"
-          ),
-          answeringMinigame(
-            <constructor de un minijuego con si o no>
-            [null, entiendeMinigame] 
-            //si significa que se avanza normalmente, por eso null, no hay branching,
-            //mientras que no vuelve a preguntar, por eso lleva a la misma escena.
-          ),
-          prompt(new Prompt(
-            dev,
-            ""Bien, bien. Hola "{{botname}}", puedes entender lo que digo?"
-          )
+          incoming["dev", "Hola, soy tu **dev** asignada, vamos a verificar tus funciones, como debería llamarte?"],
+          input["botname"],
+          incoming["dev", "Bien, bien. Hola "flae", puedes entender lo que digo?"],
+          answeringMiniGame[{
+            "entiende":"Si" //la clave del mapa es el label de juego que sigue luego, el texto es la respuesta que lo genera
+            "noentiende":"No"
+          }] //
         ]
-        val escena = Escena.sumar([inicio, nombreMiniGame]);
+    );
 
-      Ese código declarará una escena. Entonces, una escena es una lista de "NodosEscena"
-      que pueden tener varios tipos. Uno puede ser un prompt para mostrar, otro un minijuego
-      de respuestas con dos outcomes posibles (tambien NodosEscena) , otro puede
-      ser el minijuego de elegir el nombre. Una Lista de escenas es también vista 
-      como una escena, pero para convertir una o mas listas de escenas en una escena
-      se usa la funcion de argumento variable Escena.sumar(List<List<Escena>> escenas)
+    //ahora prompts tiene un label "prompts" que sirve de raìz, y branchea a dos nodos aún no definidos.
+
+    sigo definiendo 
+    prompts.define(
+      "noentiende",
+      [
+        incoming["dev", "Hola, soy tu **dev** asignada, vamos a verificar tus funciones, como debería llamarte?""],
+          answeringMiniGame[{
+            "entiende":"Si" 
+            "noentiende":"No" //referencia circular que define un bucle
+          }] 
+      ]
+
+    prompts.define(
+      "entiende",
+      [
+        incoming["dev", "Excelente flae, te cuento, yo te voy a hacer algunas preguntas y vos me tenés que responder correctamente para poder verificar tus funciones. Empecemos por la primera. Quien eres?"],
+        answeringMiniGame[{
+            "_next":""Soy flae, tu asistente virtual"" //_next es una clave que indica que el juego sigue linearmente, está reservada, ver tipos enumerados para las claves, con una estructura tipo Next | Call <clave>
+        }],
+        incoming["dev", ""Excelente flae""],
+
+      ]
+    )
 
 
-      
+    se está definiendo un grafo dirigido con esa sintaxis, con una forma ligeramente de arbol pero no necesariamente,
+    puede haber bucles.
 
-    Esto va a terminar definiendo un camino donde se van encadenando escenas.
+
   */
 }
