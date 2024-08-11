@@ -12,8 +12,8 @@ class AnsweringMiniGame{
 
   AnsweringMiniGame(this.respuestasValidas, this.interlocutor, this.ruido);
   
-  List<Pair<String, Float>> getOptions(){
-    return [];
+  List<Pair<String, double>> getOptions(){
+    return this.respuestasValidas.map((res) => Pair(res, 0.0)).toList();
   }
 
   void pickOption(int option){

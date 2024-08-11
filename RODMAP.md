@@ -293,3 +293,8 @@ _**luci**: no, qsy, no descarto tener un encuentro  fugaz con alguien, mientras 
 _(la conversación sigue y acuerdan encontrarse, no la voy a terminar de desarrollar en el roadmap, tenìa ganas de escribir nomás)_
 
 Para cuando termine el fin de semana quiero tener listo un programa de chat en flutter para usar como base del juego. Dejo de escribir este ROADMAP y me pongo a escribir código.
+
+# 2024-10-08 23:38 
+## Sigo viva
+Avancé un poco todo el proyecto. Empecé a programar el frontend y voy dandole formita de a poco. Espero tenerlo eventualmente. 
+Me entretuve haciendo lo que hice hasta ahora, voy a seguir a un ritmo que me divierta.
