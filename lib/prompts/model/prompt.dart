@@ -1,4 +1,4 @@
-import 'package:prompts/prompts/model/person.dart';
+import 'package:prompts/prompts/model/entities/person.dart';
 
 class Prompt{
   Person person;

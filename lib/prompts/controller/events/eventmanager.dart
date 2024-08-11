@@ -8,14 +8,14 @@ import 'package:prompts/prompts/controller/events/event.dart';
 class EventManager {
   static final EventBus _eventBus = EventBus(sync: false);
   static final EventManager instance = EventManager._();
-  static bool initialized = false;
+  static bool _initialized = false;
 
   EventManager._(){
-    if(!initialized){
+    if(!_initialized){
       _eventBus.on<UserEvent>().listen(
         (event) => this._handleUserEvent(event)
       );
-      initialized = true;
+      _initialized = true;
     }
   }
 
@@ -29,8 +29,8 @@ class EventManager {
 
   void _handleUserEvent(UserEvent e) {
     switch(e){
-      case UserChangeChat(name: String name):
-        debugPrint("Handle change chat: $name!");
+      case UserChangeChat(chatId: int id):
+        debugPrint("Handle change chat: $id!");
         break;
       case UserPickAnswer(id: int id):
         debugPrint("Handle pick anser $id!");

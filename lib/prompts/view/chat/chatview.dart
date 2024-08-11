@@ -27,7 +27,7 @@ class ChatViewState extends State<ChatView>{
                     children: 
                           controller
                             .getChats()
-                            .map((e) => (ChatBubble(text:e.b, isCurrentUser:e.a == controller.getMyName()) as Widget))
+                            .map((e) => (ChatBubble(text:e.b, isCurrentUser:e.a == controller.getChatName()) as Widget))
                             .toList()
                     ))
                   )

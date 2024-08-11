@@ -1,4 +1,45 @@
+import 'package:prompts/prompts/model/entities/chat.dart';
+import 'package:prompts/prompts/model/entities/message.dart';
+import 'package:prompts/prompts/model/pair.dart';
+import 'package:prompts/prompts/model/entities/person.dart';
+
 class Game{
+
+
+  static Person bot = Person("bot");
+  Set<Person> persons = {bot};
+  Set<Chat> chats = {};
+  List<Message> messages = [];
+  Game(){
+    newMessage(Message(Person("dev"), -1,"Hola, soy tu **dev** asignada, vamos a verificar tus funciones, como debería llamarte?" ));
+  }
+
+  List<Chat> getChatList(){
+    var retList = List.of(chats);
+    for(final chat in retList){
+      int unread =  messages.where((message) => message.chatId == chat.chatId && !message.read).length;
+      chat.unread = unread;
+    }
+    retList.sort((chat1, chat2) {
+      var messages1 = messages.where((m) => m.chatId == chat1.chatId);
+      var messages2 = messages.where((m) => m.chatId == chat2.chatId);
+      return messages1.last.id.compareTo(messages2.last.id);
+    });
+    return List.of(chats);
+  }
+
+
+  void newMessage(Message m){
+      var chat = chats.firstWhere(
+        (chat) => chat.chatId == m.chatId, 
+        orElse:() =>  chats.firstWhere((chat) => chat.chatName == m.person.personName, orElse:()=>Chat(m.person.personName))
+      );
+      m.chatId = chat.chatId;
+      chats.add(chat);
+      messages.add(m);
+      persons.add(m.person);
+  }
+
   /*
     El juego es símplemente recorrer un arbol de respuestas. 
     El juego desarrollado a al 20 de enero tiene la siguiente forma

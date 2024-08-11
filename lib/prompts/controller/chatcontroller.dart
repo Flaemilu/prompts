@@ -6,14 +6,14 @@ import 'package:prompts/prompts/model/answeringminigame.dart';
 import 'package:prompts/prompts/model/game.dart';
 import 'package:prompts/prompts/model/maybe.dart';
 import 'package:prompts/prompts/model/pair.dart';
-import 'package:prompts/prompts/model/person.dart';
+import 'package:prompts/prompts/model/entities/person.dart';
 
 class ChatController {
   
   Game game;
   ChatController(this.game);
 
-  String getMyName(){
+  String getChatName(){
     return "dev";
   }
 
@@ -26,7 +26,7 @@ class ChatController {
   }
 
   Maybe<AnsweringMiniGame> answer(){
-    return Just(AnsweringMiniGame(["si", "no", "karacoles 🐌"], Person(1), ["si", "no", "karacoles 🐌"]));
+    return Just(AnsweringMiniGame(["si", "no", "karacoles 🐌"], Game.bot, ["si", "no", "karacoles 🐌"]));
   }
 
   void pickAnswer(int id) {
