@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:prompts/prompts/controller/events/event.dart';
 import 'package:prompts/prompts/controller/events/eventhandler.dart';
+import 'package:prompts/prompts/controller/events/eventmanager.dart';
 import 'package:prompts/prompts/model/answeringminigame.dart';
 import 'package:prompts/prompts/model/game.dart';
 import 'package:prompts/prompts/model/maybe.dart';
@@ -26,6 +27,18 @@ class ChatController {
 
   Maybe<AnsweringMiniGame> answer(){
     return Just(AnsweringMiniGame(["si", "no", "karacoles 🐌"], Person(1), ["si", "no", "karacoles 🐌"]));
+  }
+
+  void pickAnswer(int id) {
+    EventManager.instance.fireEvent(
+      UserPickAnswer(id)
+    );
+  }
+
+  void nextMessage() {
+    EventManager.instance.fireEvent(
+      UserNextMessage()
+    );
   }
   
 }

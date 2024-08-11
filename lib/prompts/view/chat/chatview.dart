@@ -37,7 +37,7 @@ class ChatViewState extends State<ChatView>{
                   widthFactor: 2,
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(50,50,0,25),
-                    child:AnswerWidget(controller.answer())
+                    child:AnswerWidget(controller)
                   )
                 )
             ]            

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:prompts/prompts/controller/events/event.dart';
+import 'package:prompts/prompts/controller/events/eventmanager.dart';
 import 'package:prompts/prompts/controller/gamemenucontroller.dart';
 import 'package:prompts/prompts/model/pair.dart';
 
@@ -8,6 +10,7 @@ class DrawerViewState extends State<DrawerView>{
     // TODO: implement build
     var controller = this.widget.drawerController;
     var prod = controller.getProductivity().toString();
+
     List<Widget> drawerItems = [];
     drawerItems.add(
       DrawerHeader(
@@ -17,7 +20,8 @@ class DrawerViewState extends State<DrawerView>{
           child: Text('Productividad: $prod', style:const TextStyle(color: Color.fromRGBO(0, 0, 0, 1))),
         )
     );
-    drawerItems.addAll(controller.getChatNames().map((name) => _chatwidget(name)));
+    drawerItems.addAll(controller.getChatNames().map((name) => _chatwidget(name, controller)));
+    
     return Drawer(
     // Add a ListView to the drawer. This ensures the user can scroll
     // through the options in the drawer if there isn't enough vertical
@@ -32,11 +36,12 @@ class DrawerViewState extends State<DrawerView>{
 
 }
 
-Widget _chatwidget(Pair<String, int> chat){
+Widget _chatwidget(Pair<String, int> chat, GameMenuController controller){
   return ListTile(
           title: Text('${chat.a} (${chat.b})' , style:(chat.b>0?TextStyle(fontWeight: FontWeight.bold):TextStyle(fontWeight: FontWeight.normal))),
           onTap: () {
             debugPrint("Switching to : ${chat.a}");
+            controller.changeChat(chat.a);
           },
   );
 }
