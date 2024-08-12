@@ -5,11 +5,13 @@ import 'package:prompts/prompts/model/entities/person.dart';
 class Message {
   int id;
   Person person;
-  int chatId;
+  int? chatId;
   String content;
   bool read;
-  Message(this.person, this.chatId, this.content)
+  String messageLabel;
+  Message(this.person, this.chatId, this.content, {String label = ""})
     :read=false,
+     messageLabel = label,
      id=IdGenerator.nextId();
 
   @override

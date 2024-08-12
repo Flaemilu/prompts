@@ -1,3 +1,4 @@
+import 'package:prompts/prompts/model/entities/message.dart';
 import 'package:prompts/prompts/model/entities/person.dart';
 
 sealed class UserEvent{
@@ -15,13 +16,3 @@ final class UserPickAnswer extends UserEvent{
 }
 
 final class UserNextMessage extends UserEvent{}
-
-sealed class GameEvent{
-
-}
-
-final class GameNewMessage extends GameEvent{
-  Person person;
-  String message;
-  GameNewMessage(this.person, this.message);
-}

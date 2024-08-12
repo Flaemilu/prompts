@@ -1,12 +1,10 @@
-import 'package:prompts/prompts/model/entities/IdGenerator.dart';
-import 'package:prompts/prompts/model/prompt.dart';
+
 
 class Person{
   int personId;
   String personName;
 
-  Person(this.personName)
-    :personId=IdGenerator.nextId();
+  Person(this.personId, this.personName);
 
   @override
   bool operator ==(Object other) =>

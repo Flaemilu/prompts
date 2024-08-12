@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:prompts/prompts/controller/chatcontroller.dart';
 import 'package:prompts/prompts/model/answeringminigame.dart';
-import 'package:prompts/prompts/model/maybe.dart';
+import 'package:prompts/prompts/lib/maybe.dart';
 
 class AnswerWidget extends StatelessWidget{
 

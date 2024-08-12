@@ -1,6 +1,6 @@
 import 'dart:ffi';
 
-import 'package:prompts/prompts/model/pair.dart';
+import 'package:prompts/prompts/lib/pair.dart';
 import 'package:prompts/prompts/model/entities/person.dart';
 
 class AnsweringMiniGame{

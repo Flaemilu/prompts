@@ -298,3 +298,8 @@ Para cuando termine el fin de semana quiero tener listo un programa de chat en f
 ## Sigo viva
 Avancé un poco todo el proyecto. Empecé a programar el frontend y voy dandole formita de a poco. Espero tenerlo eventualmente. 
 Me entretuve haciendo lo que hice hasta ahora, voy a seguir a un ritmo que me divierta.
+
+# 2024-11-08 23:36
+## Ya casi, ya casi.
+Creo que tengo al fin una manera posible de escribir el juego. No es el motor que yo soñaba, pero me va a servir para avanzar. Quedará para mas adelante
+hacer un motor en el que el juego pueda ser definido independientemente del código.

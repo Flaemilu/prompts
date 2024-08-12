@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prompts/prompts/controller/gamemenucontroller.dart';
-import 'package:prompts/prompts/model/game.dart';
+import 'package:prompts/prompts/model/gamestate.dart';
 import 'package:prompts/prompts/view/chat/bodyview.dart';
 import 'package:prompts/prompts/view/chat/drawerview.dart';
 import 'package:prompts/prompts/view/chat/widgets/Answer.dart';
@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    Game game = Game();
+    GameState game = GameState();
     return Scaffold( 
       appBar: AppBar(
         

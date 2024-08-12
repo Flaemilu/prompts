@@ -1,16 +1,14 @@
-import 'package:flutter/material.dart';
 import 'package:prompts/prompts/controller/events/event.dart';
-import 'package:prompts/prompts/controller/events/eventhandler.dart';
 import 'package:prompts/prompts/controller/events/eventmanager.dart';
 import 'package:prompts/prompts/model/answeringminigame.dart';
-import 'package:prompts/prompts/model/game.dart';
-import 'package:prompts/prompts/model/maybe.dart';
-import 'package:prompts/prompts/model/pair.dart';
-import 'package:prompts/prompts/model/entities/person.dart';
+import 'package:prompts/prompts/model/game/game.dart';
+import 'package:prompts/prompts/model/gamestate.dart';
+import 'package:prompts/prompts/lib/maybe.dart';
+import 'package:prompts/prompts/lib/pair.dart';
 
 class ChatController {
   
-  Game game;
+  GameState game;
   ChatController(this.game);
 
   String getChatName(){
