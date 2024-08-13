@@ -294,12 +294,19 @@ _(la conversación sigue y acuerdan encontrarse, no la voy a terminar de desarro
 
 Para cuando termine el fin de semana quiero tener listo un programa de chat en flutter para usar como base del juego. Dejo de escribir este ROADMAP y me pongo a escribir código.
 
-# 2024-10-08 23:38 
+# 2024-08-10 23:38 
 ## Sigo viva
 Avancé un poco todo el proyecto. Empecé a programar el frontend y voy dandole formita de a poco. Espero tenerlo eventualmente. 
 Me entretuve haciendo lo que hice hasta ahora, voy a seguir a un ritmo que me divierta.
 
-# 2024-11-08 23:36
+# 2024-08-11 23:36
 ## Ya casi, ya casi.
 Creo que tengo al fin una manera posible de escribir el juego. No es el motor que yo soñaba, pero me va a servir para avanzar. Quedará para mas adelante
 hacer un motor en el que el juego pueda ser definido independientemente del código.
+
+# 2024-08-12 23:08
+## Milestone
+Quedan varios bugs, pero el juego ya se ve definitivamente posible. Hoy estuve 
+un rato largo después del trabajo. Voy a tratar de arreglar los bugs esta semana,
+se viene movida igual asi que no se. Probablemente me vuelva a guardar unos meses, 
+ya me está doliendo la espalda de vuelta :'-) .

@@ -4,12 +4,13 @@ import 'dart:ffi';
 import 'package:event_bus/event_bus.dart';
 import 'package:flutter/material.dart';
 import 'package:prompts/prompts/controller/events/event.dart';
+import 'package:prompts/prompts/model/game/game.dart';
 
 class EventManager {
   static final EventBus _eventBus = EventBus(sync: false);
   static final EventManager instance = EventManager._();
   static bool _initialized = false;
-
+  Game? game;
   EventManager._(){
     if(!_initialized){
       _eventBus.on<UserEvent>().listen(
@@ -29,16 +30,23 @@ class EventManager {
 
   void _handleUserEvent(UserEvent e) {
     switch(e){
-      case UserChangeChat(chatId: int id):
+      case UserChangeChat(chatId: String id):
         debugPrint("Handle change chat: $id!");
+        this.game?.person = id;
+        this.game?.mainWidget.setState(() => {});
         break;
-      case UserPickAnswer(id: int id):
+      case UserPickAnswer(id: String id, label: String label):
         debugPrint("Handle pick anser $id!");
+        this.game?.answer(label, id);
         break;
       case UserNextMessage():
         debugPrint("Handle next message!");
         break;
     }
+  }
+
+  void registerGame(Game g){
+    this.game = g;
   }
 
 }

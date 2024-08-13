@@ -7,19 +7,17 @@ import 'package:prompts/prompts/model/entities/person.dart';
 class Chat{
 
   String chatName;
-  int chatId;
   int unread = 0;
-  Answer? answer;
 
-  Chat(this.chatId, this.chatName);
+  Chat(this.chatName);
   
   
 
   @override
   bool operator ==(Object other) =>
       other is Chat &&
-      other.chatId == chatId;
+      other.chatName == chatName;
 
   @override
-  int get hashCode => chatId.hashCode;
+  int get hashCode => chatName.hashCode;
 }

@@ -1,6 +1,8 @@
 import 'package:prompts/prompts/controller/events/event.dart';
 import 'package:prompts/prompts/controller/events/eventmanager.dart';
 import 'package:prompts/prompts/model/answeringminigame.dart';
+import 'package:prompts/prompts/model/entities/answer.dart';
+import 'package:prompts/prompts/model/entities/message.dart';
 import 'package:prompts/prompts/model/game/game.dart';
 import 'package:prompts/prompts/model/gamestate.dart';
 import 'package:prompts/prompts/lib/maybe.dart';
@@ -8,28 +10,26 @@ import 'package:prompts/prompts/lib/pair.dart';
 
 class ChatController {
   
-  GameState game;
+  Game game;
   ChatController(this.game);
-
+  
   String getChatName(){
-    return "dev";
+    return game.person;
   }
 
   List<Pair<String,String>> getChats(){
-    return [
-      Pair("dev", "Hola, soy tu **dev** asignada, vamos a verificar tus funciones, como debería llamarte?"),
-      Pair("flae","flae"),
-      Pair("dev","Bien, bien. Hola **flae**, puedes entender lo que digo?"),
-    ];
+    return game.state.getChats(getChatName()).map(
+      (m) => Pair(m.person.personName, m.content)
+    ).toList();
   }
 
-  Maybe<AnsweringMiniGame> answer(){
-    return Just(AnsweringMiniGame(["si", "no", "karacoles 🐌"], Game.bot, ["si", "no", "karacoles 🐌"]));
+  AnswerMessage? getAnswer(){
+    return game.state.getAnswer(this.getChatName());
   }
 
-  void pickAnswer(int id) {
+  void pickAnswer(String label, String id) {
     EventManager.instance.fireEvent(
-      UserPickAnswer(id)
+      UserPickAnswer(id, label)
     );
   }
 
@@ -39,4 +39,7 @@ class ChatController {
     );
   }
   
+  void markRead(){
+    game.markRead(getChatName());
+  }
 }

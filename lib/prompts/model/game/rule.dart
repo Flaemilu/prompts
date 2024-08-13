@@ -2,10 +2,11 @@ import 'package:prompts/prompts/model/game/action.dart';
 import 'package:prompts/prompts/model/gamestate.dart';
 
 sealed class GameRule{
+  bool Function(GameState) canRun;
+  GameRule(this.canRun);
 }
 
 final class WhenRule extends GameRule{
-  bool Function(GameState) canRun;
   List<GameAction> nextActions;
-  WhenRule(this.canRun, this.nextActions);
+  WhenRule(super.canRun, this.nextActions);
 }

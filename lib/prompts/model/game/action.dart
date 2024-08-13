@@ -9,5 +9,7 @@ final class MessageAction extends GameAction{
 
 final class AnswerAction extends GameAction{
   Map<String, MessageAction> answerMap;
-  AnswerAction(this.answerMap);
+  String label;
+  String? chosen;
+  AnswerAction(this.answerMap, this.label);
 }

@@ -1,11 +1,13 @@
 import 'package:prompts/prompts/model/entities/IdGenerator.dart';
+import 'package:prompts/prompts/model/entities/answer.dart';
 import 'package:prompts/prompts/model/entities/chat.dart';
 import 'package:prompts/prompts/model/entities/person.dart';
+import 'package:prompts/prompts/model/game/action.dart';
 
 class Message {
   int id;
   Person person;
-  int? chatId;
+  String chatId;
   String content;
   bool read;
   String messageLabel;
@@ -21,4 +23,10 @@ class Message {
 
   @override
   int get hashCode => id.hashCode;
+}
+
+class AnswerMessage extends Message{
+  Map<String, MessageAction> options;
+  String? pick;
+  AnswerMessage(this.options, super.person, super.chatId, super.content, {String label = ""});
 }

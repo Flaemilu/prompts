@@ -12,7 +12,7 @@ class ChatViewState extends State<ChatView>{
   @override
   Widget build(BuildContext context) {
     var controller = this.widget.controller;
-
+    controller.markRead();
     return 
       Stack(
             children: [

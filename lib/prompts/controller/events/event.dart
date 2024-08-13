@@ -6,13 +6,14 @@ sealed class UserEvent{
 }
 
 final class UserChangeChat extends UserEvent{
-  int chatId;
+  String chatId;
   UserChangeChat(this.chatId);
 }
 
 final class UserPickAnswer extends UserEvent{
-  int id;
-  UserPickAnswer(this.id);
+  String id;
+  String label;
+  UserPickAnswer(this.id, this.label);
 }
 
 final class UserNextMessage extends UserEvent{}

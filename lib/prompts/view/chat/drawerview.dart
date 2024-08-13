@@ -38,8 +38,8 @@ Widget _chatwidget(Chat chat, GameMenuController controller){
   return ListTile(
           title: Text('${chat.chatName} (${chat.unread})' , style:(chat.unread>0?TextStyle(fontWeight: FontWeight.bold):TextStyle(fontWeight: FontWeight.normal))),
           onTap: () {
-            debugPrint("Switching to : ${chat.chatId}");
-            controller.changeChat(chat.chatId);
+            debugPrint("Switching to : ${chat.chatName}");
+            controller.changeChat(chat.chatName);
           },
   );
 }
