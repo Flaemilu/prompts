@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:prompts/prompts/controller/chatcontroller.dart';
-import 'package:prompts/prompts/model/answeringminigame.dart';
 import 'package:prompts/prompts/view/chat/widgets/Answer.dart';
 import 'package:prompts/prompts/view/chat/widgets/ChatBubble.dart';
+import 'package:prompts/prompts/view/chat/widgets/chatlist.dart';
 
 class ChatViewState extends State<ChatView>{
 
@@ -18,19 +18,7 @@ class ChatViewState extends State<ChatView>{
             children: [
                 Align(
                   alignment: Alignment.topRight,
-
-                  child: SingleChildScrollView(
-                
-                  child:Padding(
-                    padding: EdgeInsets.fromLTRB(25, 25, 25, 50),
-                    child: Column(
-                    children: 
-                          controller
-                            .getChats()
-                            .map((e) => (ChatBubble(text:e.b, isCurrentUser:e.a == controller.getChatName()) as Widget))
-                            .toList()
-                    ))
-                  )
+                  child:ChatList(controller)
                 ),
                 Align(
                   alignment: Alignment.bottomLeft,

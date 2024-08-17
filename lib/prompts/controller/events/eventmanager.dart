@@ -1,6 +1,3 @@
-
-import 'dart:ffi';
-
 import 'package:event_bus/event_bus.dart';
 import 'package:flutter/material.dart';
 import 'package:prompts/prompts/controller/events/event.dart';

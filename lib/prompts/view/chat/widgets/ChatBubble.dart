@@ -22,13 +22,15 @@ class ChatBubble extends StatelessWidget {
           color: isCurrentUser ? Colors.blue : Colors.grey[300],
           borderRadius: BorderRadius.circular(16),
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(12),
-          child: Text(
-            text,
-            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                color: isCurrentUser ? Colors.white : Colors.black87),
-          ),
+        child: ConstrainedBox(constraints: const BoxConstraints(maxWidth: 400),
+          child: Padding(
+            padding: const EdgeInsets.all(12),
+            child: Text(
+              text,
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  color: isCurrentUser ? Colors.white : Colors.black87),
+            ),
+          )
         ),
       ),
     ),

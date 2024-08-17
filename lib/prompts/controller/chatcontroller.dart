@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:prompts/prompts/controller/events/event.dart';
 import 'package:prompts/prompts/controller/events/eventmanager.dart';
 import 'package:prompts/prompts/model/answeringminigame.dart';
@@ -12,7 +13,8 @@ class ChatController {
   
   Game game;
   ChatController(this.game);
-  
+  ScrollController scrollController = ScrollController();
+
   String getChatName(){
     return game.person;
   }

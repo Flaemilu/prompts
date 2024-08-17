@@ -6,6 +6,7 @@ import 'package:prompts/prompts/model/entities/message.dart';
 import 'package:prompts/prompts/model/entities/person.dart';
 import 'package:prompts/prompts/model/game/action.dart';
 import 'package:prompts/prompts/model/game/rule.dart';
+import 'package:prompts/prompts/model/game/story/basestory.dart';
 import 'package:prompts/prompts/model/gamestate.dart';
 
 class Game{
@@ -15,45 +16,12 @@ class Game{
   State mainWidget;
   String person = "dev";
   static Person bot = Person(IdGenerator.nextId(),"bot");
-  static Person dev = Person(IdGenerator.nextId(), "dev");
   static Person luci = Person(IdGenerator.nextId(), "luci");
   
   
   Game(this.mainWidget){
-    reglas.addAll([
-      WhenRule(
-        (state)=>!state.persons.contains(dev),
-        [
-          MessageAction(Message(dev, dev.personName, "Hola bot, soy tu dev, entendes lo que digo?")),
-          MessageAction(Message(luci, luci.personName, "hola hola")),
-          MessageAction(Message(luci, luci.personName, "hola hola")),
-          MessageAction(Message(luci, luci.personName, "hola hola")),
-          MessageAction(Message(luci, luci.personName, "hola hola")),
-          MessageAction(Message(luci, luci.personName, "hola hola")),
-          AnswerAction({
-            "si":MessageAction(Message(bot, dev.personName, "si", label:"BOT_ENTIENDE")),
-            "no":MessageAction(Message(bot, dev.personName, "no", label:"BOT_NO_ENTIENDE"))
-          },
-          "BOT_ENTIENDE_DEV"
-        )
-        ]
-      ),
-      WhenRule(
-        (state) {
-           return state.persons.contains(dev) && !state.messages.any((m) => m.messageLabel == "BOT_ENTIENDE");
-        },
-        [
-          MessageAction(Message(dev, dev.personName, "Hola bot, soy tu dev, entendes lo que digo?")),
-          AnswerAction(
-            {
-              "si":MessageAction(Message(bot, dev.personName, "si", label:"BOT_ENTIENDE")),
-              "no":MessageAction(Message(bot, dev.personName, "no", label:"BOT_NO_ENTIENDE"))
-            }, 
-            "BOT_ENTIENDE_DEV"
-          )
-        ]
-      )
-    ]);
+    var story = BaseStory(this);
+    story.loadStory();
     EventManager.instance.registerGame(this);
   }
 
@@ -70,10 +38,11 @@ class Game{
                 break;
               case AnswerAction(
                 answerMap: Map<String, MessageAction> answerMap,
+                chatId: String chatId,
                 label: String label
               ):
                 state.newEvent(
-                  AnswerMessage(answerMap, bot, dev.personName, "", label:label)
+                  AnswerMessage(answerMap, bot, chatId, "", label:label)
                 );
                 break;
             }
@@ -86,11 +55,10 @@ class Game{
   answer(String label, String answer){
     var m = state.getMessageByLabel(label);
      if(m is AnswerMessage){
-      AnswerMessage a = m as AnswerMessage;
-      var  options = a.options;
+      var  options = m.options;
       MessageAction? ma = options[answer];
       if(ma != null){
-        a.pick = answer;
+        m.pick = answer;
         state.newEvent(ma.message);
         gameCycle();
       }
@@ -103,7 +71,7 @@ class Game{
   markRead(String chatName){
     int counter = 0;
     this.state.messages.where( 
-      (message) => !(message is AnswerMessage) &&
+      (message) => (message is! AnswerMessage) &&
                     message.chatId == chatName
     ).forEach((message) {
       if(!message.read){

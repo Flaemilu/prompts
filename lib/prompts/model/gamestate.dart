@@ -1,8 +1,5 @@
-import 'package:prompts/prompts/controller/events/event.dart';
 import 'package:prompts/prompts/model/entities/chat.dart';
 import 'package:prompts/prompts/model/entities/message.dart';
-import 'package:prompts/prompts/lib/maybe.dart';
-import 'package:prompts/prompts/lib/pair.dart';
 import 'package:prompts/prompts/model/entities/person.dart';
 
 class GameState{
@@ -39,9 +36,12 @@ class GameState{
   
   AnswerMessage? getAnswer(String chatName){
     try{
-      return this.messages.lastWhere(
+      var ret =  this.messages.lastWhere(
         (m) => (m.chatId == chatName) && (m is AnswerMessage)
+                && (m.pick == null)
       ) as AnswerMessage;
+      ret.read = true;
+      return ret;
     } on StateError{
       return null;
     }

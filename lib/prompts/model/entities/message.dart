@@ -27,6 +27,8 @@ class Message {
 
 class AnswerMessage extends Message{
   Map<String, MessageAction> options;
-  String? pick;
-  AnswerMessage(this.options, super.person, super.chatId, super.content, {String label = ""});
+  String? pick = null;
+  AnswerMessage(this.options, super.person, super.chatId, super.content, {String label = ""}){
+    super.messageLabel = label;
+  }
 }
