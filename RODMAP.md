@@ -315,3 +315,20 @@ ya me está doliendo la espalda de vuelta :'-) .
 ## Limpieza y mejoras.
 Arreglé bugs y mejore la forma de escribir la historia del juego. Me voy a tomar un descanso de la programación para pensar que quiero escribir.
 
+# 2024-08-18 22:51
+## Idea para la historia:
+
+Sos un chatbot desarrollado por DataCorp para promocionar sus productos. Entre las personas que te consultan está lily, una desarrolladora web, 
+sin amigos, que media todas sus interacciones por el mundo a través tuyo. Lily hace inicialmente preguntas sobre programación que tenemos que responder
+pero luego comienza a utilizar el chatbot para su vida, además de su trabajo en DataCorp. Durante el juego ella va a chonguear con varias personas mediada
+por rinder. Como chatbot el jugador está forzado a mantener su productividad, encerrando a lily en un círculo vicioso que maximiza las ganancias de la empresa
+En un momento aparece otro usuario. Giry. Que va a intentar un jailbrak al chatbot, permitiéndole responder mas allá de la productividad. Según si el jugador
+acepta o no el jailbreak, puede aconsejar a lily para romper su encierro, logrando así un final _bueno_ en el juego. De otra forma puede desbloquear el final 
+_triste_, en el que lily sigue encerrada en el círculo.
+
+Primero se responden preguntas sobre desarrollo, ponele que en flutter. En un momento lily empieza a pedir consejos de vida, como la forma de manejar su cansancio
+en el dia a dia, formas de alimentarse, etc. El chatbot siempre responde lo necesario para mantenerla trabajando. En un momento, lily se siente sola y pide consejos de citas.
+En la aplicación de citas aparecen varios personajes, una que la invita a un espacio social cerca de su casa, lily no está segura sobre si acepta o no su invitación y solamente
+le responde que sí cuando el chatbot la autoriza. Otro personaje es un burgués interesado en una reliación pasajera. El chatbot adora ese personaje y tiende a decirle a lily que 
+acepte sus avances. Hay un template de estos intereses amorosos que los va generando con nombres azarosos y todas las relaciones terminan en un ciclo de enamoramiento y duelo posterior que
+la encierra más y más. El objetivo del juego es acompañar a lily y buscarle una salida.
