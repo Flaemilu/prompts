@@ -310,3 +310,8 @@ Quedan varios bugs, pero el juego ya se ve definitivamente posible. Hoy estuve
 un rato largo después del trabajo. Voy a tratar de arreglar los bugs esta semana,
 se viene movida igual asi que no se. Probablemente me vuelva a guardar unos meses, 
 ya me está doliendo la espalda de vuelta :'-) .
+
+# 2024-08-18 19:22
+## Limpieza y mejoras.
+Arreglé bugs y mejore la forma de escribir la historia del juego. Me voy a tomar un descanso de la programación para pensar que quiero escribir.
+
