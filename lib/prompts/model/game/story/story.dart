@@ -70,15 +70,15 @@ abstract class Story {
   }
 
 
-  WhenRule prompt(bool Function(GameState) condition, List<MapEntry<String, MessageAction>> entries, String chatId, String label){
+  WhenRule prompt(bool Function(GameState) condition, List<MapEntry<String, List<GameAction>>> entries, String chatId, String label){
     return WhenRule(
       condition, 
       [AnswerAction(Map.fromEntries(entries), chatId, label)]
     );
   }
 
-  MapEntry<String, MessageAction> option(String prompt, String chatId, String label){
-    return MapEntry(prompt, MessageAction(Message(Game.bot, chatId, prompt, label: label)));
+  MapEntry<String, List<MessageAction>> option(String prompt, String chatId, String label){
+    return MapEntry(prompt, [MessageAction(Message(Game.bot, chatId, prompt, label: label))]);
   }
   
   List<MessageAction> makeMessages(Person p, List<String> messages, String chat, String? labelLast){
@@ -91,5 +91,69 @@ abstract class Story {
 
   bool Function(GameState) rule(bool Function() f){
     return (state) => f();
+  }
+
+   void personSaysAfter(Person p, List<String> message,String labelBefore, String labelLast){
+    addRule(
+      dm(
+        (s) => lastMessageReceived(labelBefore, s),
+        p,
+        message,
+        labelLast: labelLast
+      )
+    );
+  }
+
+  void pickName(bool Function(GameState) condition, List<String> options, String pickNameLabel){
+    addRule(
+      WhenRule(
+        condition, 
+        [
+          AnswerAction(
+            Map.fromEntries(options.map((name) => MapEntry(
+              name, 
+              [
+                CodeAction((g) => Game.bot.personName = name),
+                MessageAction(Message(Game.bot, "dev", name, label: pickNameLabel)) //TODO?
+              ]
+            ))),
+            "dev",
+            pickNameLabel
+          )
+        ]
+      )
+    );
+  }
+  void promptChatAfter(Map<String, String> options, String chat, String labelBefore, String promptName){
+    addRule(
+      prompt(
+        (s) => lastMessageReceived(labelBefore, s),
+        options.entries.map((entry) => option(entry.value, chat, entry.key)).toList(),
+        chat, 
+        promptName
+      )
+    );
+  }
+
+  void sayFirst(Person person, List<String> messages, String labelLast){
+    addRule(
+      dm(
+        (s) => !s.persons.contains(person),
+        person,
+        messages,
+        labelLast: labelLast
+      )
+    );
+  }
+
+    void promptFirst(Person p, Map<String, String> options, String chat, String labelBefore, String promptName){
+    addRule(
+      prompt(
+        (s) => !s.persons.contains(p),
+        options.entries.map((entry) => option(entry.value, chat, entry.key)).toList(),
+        p.personName, 
+        promptName
+      )
+    );
   }
 }

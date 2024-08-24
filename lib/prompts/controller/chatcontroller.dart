@@ -21,7 +21,7 @@ class ChatController {
 
   List<Pair<String,String>> getChats(){
     return game.state.getChats(getChatName()).map(
-      (m) => Pair(m.person.personName, m.content)
+      (m) => Pair(m.person.personName, m.content.replaceAll("#{name}", Game.bot.personName)) //revisar la forma de tener un mapa de variables
     ).toList();
   }
 

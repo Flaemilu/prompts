@@ -32,37 +32,49 @@ class Game{
       (rule) {
         rule.nextActions.forEach(
           (action) {
-            switch(action){
-              case MessageAction(message: Message m):
-                state.newEvent(m);
-                break;
-              case AnswerAction(
-                answerMap: Map<String, MessageAction> answerMap,
-                chatId: String chatId,
-                label: String label
-              ):
-                state.newEvent(
-                  AnswerMessage(answerMap, bot, chatId, "", label:label)
-                );
-                break;
-            }
+            proccessAction(action);
           }
         );
       }
     );
   }
 
+  proccessAction(GameAction action){
+    switch(action){
+      case MessageAction(message: Message m):
+        state.newEvent(m);
+        break;
+      case AnswerAction(
+        answerMap: Map<String, List<GameAction>> answerMap,
+        chatId: String chatId,
+        label: String label
+      ):
+        state.newEvent(
+          AnswerMessage(answerMap, bot, chatId, "", label:label)
+        );
+        break;
+      case CodeAction(program: void Function(Game) program):
+        program(this);
+        break;
+      default:
+        break;
+    }
+  }
+
   answer(String label, String answer){
     var m = state.getMessageByLabel(label);
      if(m is AnswerMessage){
       var  options = m.options;
-      MessageAction? ma = options[answer];
+      m.read = true;
+      m.pick = answer;
+      List<GameAction>? ma = options[answer];
       if(ma != null){
-        m.pick = answer;
-        state.newEvent(ma.message);
-        gameCycle();
+        for(GameAction action in ma){
+          proccessAction(action);
+        }
       }
     }
+  gameCycle();
     mainWidget.setState(() => {
 
     });
