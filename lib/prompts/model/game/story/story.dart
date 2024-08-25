@@ -22,9 +22,9 @@ abstract class Story {
     return g.messages.any((message) => message.messageLabel == label);
   }
 
-  bool lastMessageReceived(String label, GameState g){
+  bool lastMessageReceived(List<String> labels, GameState g){
       try{
-        return g.messages.where((message) => message is! AnswerMessage).last.messageLabel == label;
+        return labels.contains(g.messages.where((message) => message is! AnswerMessage).last.messageLabel);
       } catch (e) {
         return false;
       }
@@ -93,7 +93,7 @@ abstract class Story {
     return (state) => f();
   }
 
-   void personSaysAfter(Person p, List<String> message,String labelBefore, String labelLast){
+   void personSaysAfter(Person p, List<String> message,List<String> labelBefore, String labelLast){
     addRule(
       dm(
         (s) => lastMessageReceived(labelBefore, s),
@@ -103,6 +103,7 @@ abstract class Story {
       )
     );
   }
+
 
   void pickName(bool Function(GameState) condition, List<String> options, String pickNameLabel){
     addRule(
@@ -124,7 +125,7 @@ abstract class Story {
       )
     );
   }
-  void promptChatAfter(Map<String, String> options, String chat, String labelBefore, String promptName){
+  void promptChatAfter(Map<String, String> options, String chat, List<String> labelBefore, String promptName){
     addRule(
       prompt(
         (s) => lastMessageReceived(labelBefore, s),
