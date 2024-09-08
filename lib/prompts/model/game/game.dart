@@ -74,10 +74,11 @@ class Game{
         }
       }
     }
-  gameCycle();
+    gameCycle();
     mainWidget.setState(() => {
 
     });
+    markRead(m.chatId);
   }
 
   markRead(String chatName){

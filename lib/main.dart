@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:prompts/prompts/controller/gamemenucontroller.dart';
 import 'package:prompts/prompts/model/game/game.dart';
-import 'package:prompts/prompts/model/gamestate.dart';
 import 'package:prompts/prompts/view/chat/bodyview.dart';
 import 'package:prompts/prompts/view/chat/drawerview.dart';
-import 'package:prompts/prompts/view/chat/widgets/Answer.dart';
-import 'package:prompts/prompts/view/chat/widgets/ChatBubble.dart';
-import 'package:prompts/prompts/widgets/chaticon.dart';
-import 'package:prompts/prompts/widgets/drawer.dart';
+import 'package:badges/badges.dart' as badges;
 
 
 
@@ -50,18 +46,46 @@ class _PromptsState extends State<Prompts> {
     game = Game(this);
     game?.gameCycle();
   }
-
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
-    
-    return Scaffold( 
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      drawer: DrawerView(GameMenuController(game!)),
-      body: BodyView(game!) // This trailing comma makes auto-formatting nicer for build methods.
-    );
+    var unread = GameMenuController(game!).getUnread(game!.person);
+    if(unread > 0) {
+      return Scaffold( 
+        key: _scaffoldKey,
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title:  Text(widget.title),
+          leading: badges.Badge(
+            position: badges.BadgePosition.center(),
+            badgeContent: Text(
+             unread.toString(),
+              style: TextStyle(color: Colors.white),
+            ),
+            child:IconButton(
+              icon: Icon(Icons.menu),
+              onPressed: () {_scaffoldKey.currentState?.openDrawer();},
+            )
+          )
+        ),
+        drawer: DrawerView(GameMenuController(game!)),
+        body: BodyView(game!) // This trailing comma makes auto-formatting nicer for build methods.
+      );
+    } else {
+      return Scaffold( 
+        key: _scaffoldKey,
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title:  Text(widget.title),
+          leading: IconButton(
+              icon: Icon(Icons.menu),
+              onPressed: () {_scaffoldKey.currentState?.openDrawer();},
+          )
+        ),
+        drawer: DrawerView(GameMenuController(game!)),
+        body: BodyView(game!) // This trailing comma makes auto-formatting nicer for build methods.
+      );
+    }
   }
 }

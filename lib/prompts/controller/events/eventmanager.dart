@@ -29,12 +29,12 @@ class EventManager {
     switch(e){
       case UserChangeChat(chatId: String id):
         debugPrint("Handle change chat: $id!");
-        this.game?.person = id;
-        this.game?.mainWidget.setState(() => {});
+        game?.person = id;
+        game?.mainWidget.setState(() {});
         break;
       case UserPickAnswer(id: String id, label: String label):
         debugPrint("Handle pick anser $id!");
-        this.game?.answer(label, id);
+        game?.answer(label, id);
         break;
       case UserNextMessage():
         debugPrint("Handle next message!");

@@ -18,15 +18,29 @@ class ChatListState extends State<ChatList>{
   @override
   Widget build(BuildContext context) {
 
+    var chats = widget.controller
+      .getChats()
+      .map((e) => (ChatBubble(text:e.b, isCurrentUser:e.a == widget.controller.getChatName()) as Widget))
+      .toList();
+    if(widget.unread > 0) chats.insert(chats.length - widget.unread, Row(
+    children: <Widget>[
+        Expanded(
+            child: Divider()
+        ),       
+
+        Text("mensajes sin leer"),        
+
+        Expanded(
+            child: Divider()
+        ),
+    ]
+));
     var chatList = Padding(
           padding: const EdgeInsets.fromLTRB(25, 25, 25, 100),
           child:ListView(
             controller: widget.controller.scrollController,
-            children: 
-                          widget.controller
-                            .getChats()
-                            .map((e) => (ChatBubble(text:e.b, isCurrentUser:e.a == widget.controller.getChatName()) as Widget))
-                            .toList()
+            children: chats
+                          
           )
           
             
@@ -63,8 +77,8 @@ class ChatListState extends State<ChatList>{
 
 class ChatList extends StatefulWidget{
   final ChatController controller;
-
-  const ChatList(this.controller, {super.key});
+  final int unread;
+  const ChatList(this.controller, this.unread,  {super.key});
 
 
   @override

@@ -12,13 +12,14 @@ class ChatViewState extends State<ChatView>{
   @override
   Widget build(BuildContext context) {
     var controller = this.widget.controller;
+    var unread = this.widget.controller.getUnread();
     controller.markRead();
     return 
       Stack(
             children: [
                 Align(
                   alignment: Alignment.topRight,
-                  child:ChatList(controller)
+                  child:ChatList(controller, unread)
                 ),
                 Align(
                   alignment: Alignment.bottomLeft,

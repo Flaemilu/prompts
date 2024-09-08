@@ -25,6 +25,10 @@ class ChatController {
     ).toList();
   }
 
+  int getUnread(){
+    return game.state.getChats(getChatName()).fold(0, (n, chat) => n + (!chat.read?1:0));
+  }
+
   AnswerMessage? getAnswer(){
     return game.state.getAnswer(this.getChatName());
   }

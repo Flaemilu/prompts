@@ -10,7 +10,6 @@ class GameMenuController{
 
   Game game;
   GameMenuController(this.game);
-  
   List<Chat> getChats(){
     return game.state.getChatList();
   }
@@ -19,6 +18,9 @@ class GameMenuController{
     return 1;
   }
 
+  int getUnread(String currentChat){
+    return game.state.getChatList().where( (chat) => chat.chatName != currentChat).map((element) => element.unread).fold(0, (n, s) => n+s);
+  }
   void changeChat(String chatId){
     EventManager.instance.fireEvent(
       UserChangeChat(chatId)
