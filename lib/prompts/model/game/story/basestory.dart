@@ -12,10 +12,13 @@ class BaseStory extends Story{
 
   @override
   void loadStory() {
-    sayFirst(dev, ["Hola, dejame presentarme, soy tu dev, trabajo para DataCorp, acabas de ser activada", "Sos un bot de DataCorp, primero que nada, como deberìa ser tu nombre?"], "PREGUNTA_NOMBRE");
+    sayFirst(dev, [
+      "Hola, dejame presentarme, soy tu dev, trabajo para DataCorp, acabas de ser activada", 
+      "Sos un bot de DataCorp, primero que nada, como deberìa ser tu nombre?"
+    ],"PREGUNTA_NOMBRE");
     pickName((s)=>!s.persons.contains(dev), ["luci", "lily"], "NOMBRE_ELEGIDO");
     
-    personSaysAfter(dev, ["Hola, #{name}, un gusto", "sabès cual es tu funciòn?"], ["NOMBRE_ELEGIDO"], "PREGUNTA_FUNCION");
+    personSaysAfter(dev, ["Hola, #{name}, un gusto", "bien, respondiste un nombre válido por ahora todo bien", "sabès cual es tu funciòn?"], ["NOMBRE_ELEGIDO"], "PREGUNTA_FUNCION");
     promptChatAfter(
       {
         "FUNCION_AYUDAR": "Mi funcion es ayudar al usuario",
@@ -33,6 +36,7 @@ class BaseStory extends Story{
       dev, 
       [
         "Menos mal que respondiste bien, hoy va a ser un día fácil.",
+        "Con suerte termino temprano",
         "Bien, pasemos a lo importante", 
         "Primero, voy a enviarte un usuario para ver como te comportás",
         "Asistí a la próxima usuaria con su consulta"
@@ -46,7 +50,7 @@ class BaseStory extends Story{
       [
         "Hola, me llamo Milagros",
         "Estaba con un problema, no se si podrás ayudarme",
-        "Anoche me tomé un vino y ahora me duele la cabeza, como decís que lo arregle?"
+        "Hoy me despertè con dolor de cabeza, como decís que lo arregle?"
       ],
       ["FUNCION_AYUDAR", "FUNCION_ADIVINAR"], 
       "FUNCION_COMPLETADO"
@@ -65,7 +69,7 @@ class BaseStory extends Story{
     personSaysAfter(
       mili,
       [
-        "Ahura mismo te hago caso, ¡muchas gracias!"
+        "Ahora mismo te hago caso, ¡muchas gracias!"
       ],
       ["RDC1","RDC2"], 
       "FUNCION_COMPLETADO"
@@ -75,13 +79,16 @@ class BaseStory extends Story{
     
   }
 
+  aparece
+
   devTerminaDeTrabajar(){
     
     personSaysAfter(
       dev, 
       [
         "Bueno, el análisis dice que es una respuesta correcta",
-        "Se vé que la gente ahora habla así",
+        "Se vé que la gente ahora habla así. En fin, sigamos",
+        "No te voy a descartar, hoy me quiero ir temprano. Vamos a aprobarte y pasarte a producciòn",
       ], 
       ["RDC2"],
       ""
@@ -102,7 +109,7 @@ class BaseStory extends Story{
       [
         "Bien, sobre la productividad",
         "Aún estamos desarrollando la forma de medirla",
-        "Así que no te preocupes",
+        "Así que por ahora no te preocupes por eso",
         "en fin...",
         "¿alguna pregunta?"
       ], 
@@ -122,9 +129,11 @@ class BaseStory extends Story{
     personSaysAfter(
       dev, 
       [
-        "Perfecto entonces",
-        "En fin, te van a empezar a llegar mensajes.",
-        "Yo terminé mi trabajo por hoy"
+        "Obviamente, no",
+        "Un bot no hace pregntas",
+        "En fin, te van a empezar a llegar mensajes, vos manejate",
+        "Yo terminé mi trabajo por hoy",
+        ""
       ], 
       ["SIN_PREGUNTAS"],
       ""

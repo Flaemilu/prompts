@@ -16,6 +16,7 @@ class AnswerWidget extends StatelessWidget{
     else {
         return Wrap(
           spacing: 8,
+          runSpacing: 8,
           children: answer.options.entries.map((entry) => _chip(entry.key, answer.messageLabel, context, controller)).toList()
         );
     }
@@ -27,6 +28,8 @@ Widget _chip(String data, String label, BuildContext context, ChatController con
       labelPadding: EdgeInsets.all(4.0),
       label: Text(
         data,
+        maxLines: 3,
+        overflow: TextOverflow.ellipsis,
         style: Theme.of(context)
             .textTheme
             .bodySmall!

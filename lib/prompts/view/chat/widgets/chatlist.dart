@@ -22,7 +22,7 @@ class ChatListState extends State<ChatList>{
       .getChats()
       .map((e) => (ChatBubble(text:e.b, isCurrentUser:e.a == widget.controller.getChatName()) as Widget))
       .toList();
-    if(widget.unread > 0) chats.insert(chats.length - widget.unread, Row(
+    if(widget.unread > 0 && widget.unread != chats.length) chats.insert(chats.length - widget.unread, Row(
     children: <Widget>[
         Expanded(
             child: Divider()
