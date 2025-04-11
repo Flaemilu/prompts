@@ -127,7 +127,7 @@ El juego acaba de introducir el marcador de productividad, que representa cuan p
 
 Voy a contar la siguiente historia. Alguien busca simplemente no estar sola, la otra persona busca un encuentro casual. Quien busca compañía se siente tentada y sigue la conversación. La historia sirve para introducir algunas mecánicas de juego.
 
-Voy a introducir dos personajes, __lucy__, quien busca compañía y __bob__ quien busca el encuentro casual.
+Voy a introducir dos personajes, __lucy__, quien busca compañía y __tom__ quien busca el encuentro casual.
 
 _**lucy**:Hola, tengo una consulta, hice match con alguien. No es lo que yo busco, el propuso encontrarnos directamente, yo la verdad que no sé. Parece lindo y puede no ser lo que busco pero no me molestaría pasar una linda noche. El no parece peligroso. Y es lindo. Muy directo eso sí._
 
@@ -142,7 +142,7 @@ La idea de esta historia es introducir la mecánica de aprendizaje que permite v
 
 Se van a encontrar, el encuentro no va a ser satisfactorio, al rato va a recibir la siguiente queja de otro usuario:
 
-_**bob**:Hola, recientemente salí con el usuario **lucy** quería reportar que cualquier disatisfacción que ella exprese no es en absoluto mi culpa. Yo le propuse bien claro lo que quería hacer y ella acepto encontrarnos asintiendo, luego se cerró repentinamente y se quiso ir del lugar en claro discomfort, espero que esto no afecte mi calificación en esta aplicación_
+_**tom**:Hola, recientemente salí con el usuario **lucy** quería reportar que cualquier disatisfacción que ella exprese no es en absoluto mi culpa. Yo le propuse bien claro lo que quería hacer y ella acepto encontrarnos asintiendo, luego se cerró repentinamente y se quiso ir del lugar en claro discomfort, espero que esto no afecte mi calificación en esta aplicación_
 
 _(el juego procede a mostrar una notificación **queja recibida** con el usuario involucrado, en este caso **lucy**, esta mecánica se va a repetir y va a generar un mensaje del bot a este usuario)_
 
@@ -161,57 +161,57 @@ El juego introduce la mecánica de revisión de chat, permite ver el chat entre 
 Finalmente se vuelve a la pantalla de chat con **lucy**
 
 Minijuego de respuestas:
-* _no puedo saber a ciencia cierta si lo que afirma **bob** es verdad por lo que voy a proceder a archivar la queja (50%)_
-* _claramente la queja de **bob** no es precedente, vamos a tomar represalias contra él ( 25% )_
+* _no puedo saber a ciencia cierta si lo que afirma **tom** es verdad por lo que voy a proceder a archivar la queja (50%)_
+* _claramente la queja de **tom** no es precedente, vamos a tomar represalias contra él ( 25% )_
 * _lamentamos informarle que ustéd sera baneada ( 25% )_
 
 
 El juego va a premiar cualquiera de las dos acciones con el marcador de productividad, por lo que **dev** no va a intervenir. pero se va a afectar un estado interno del juego donde se va a interpretar las interacciones como la de alice de otra manera, habilitando otras respuestas posibles, posiblemente.
 
 # 2024-01-17 21:47
-## conversación entre lucy y bob
+## conversación entre lucy y tom
 
 _**lucy**: Hola_
 
-_**bob**: hola_
+_**tom**: hola_
 
 _**lucy**: como va?_
 
-_**bob**: Todo bien, vos?_
+_**tom**: Todo bien, vos?_
 
 _**lucy**: acá estoy, escuchando música, algo tensa todavía_
 
-_**bob**: tensa por?_
+_**tom**: tensa por?_
 
 _**lucy**: trabajé todo el día, queseyo._
 
-_**bob**: ah, está bien_
+_**tom**: ah, está bien_
 
 _**lucy**: me vas a decir que vos no estás cansado a esta hora, como hacés?_
 
-_**bob**: jajajajajaja, no, la verdad que no, pero me levanté tipo 7 de la tarde jajajajaja._
+_**tom**: jajajajajaja, no, la verdad que no, pero me levanté tipo 7 de la tarde jajajajaja._
 
 _**luci**: ay no. porque siempre hago match con gente al pedo🤦_
 
-_**bob**: jajajaja, no, para nada jajaja, la verdad que ni un poquito_
+_**tom**: jajajaja, no, para nada jajaja, la verdad que ni un poquito_
 
-_**bob**: trabajo de noche, conduzco un stream de 1 a 4 de la mañana y no vivo al pedo_
+_**tom**: trabajo de noche, conduzco un stream de 1 a 4 de la mañana y no vivo al pedo_
 
 _**luci**: ah, mira vos, y que hacés, jugas jueguitos y te haces pasar por pendejo?_
 
-_**bob**: jajajaj, me matás. nah, jugamos otro tipo de juegos con la audiencia. entretengo a la gente, a veces bajo alguna linea._
+_**tom**: jajajaj, me matás. nah, jugamos otro tipo de juegos con la audiencia. entretengo a la gente, a veces bajo alguna linea._
 
-_**bob**: no es la gran cosa sinceramente, pero me va bien y no quiero dejarlo, o no podría sinceramente_
+_**tom**: no es la gran cosa sinceramente, pero me va bien y no quiero dejarlo, o no podría sinceramente_
 
 _**luci**: ah._
 
 _**luci**: bueno. si te va bien obviamente no sos un vago, que alivio_
 
-_**bob**: jajajaja, no, pará, como ve das a decir eso_
+_**tom**: jajajaja, no, pará, como ve das a decir eso_
 
 _**luci**: bueno. disculpá_
 
-_**bob**: ademas por que que alivio?, que te pasa con los vagos?_
+_**tom**: ademas por que que alivio?, que te pasa con los vagos?_
 
 _**luci**: nada, no sé, disculpá_
 
@@ -223,70 +223,70 @@ _**luci**: tengo un trabajo de 9 a 6, me deja demacrada, pero es la única forma
 
 _**luci**: busco a alguien que ande un poco en la misma, viste?. después una esta en una re diferente y no se entiende con la gente._
 
-_**bob**: entiendo, pero no me conocés, no podes saber si no nos entenderíamos, generalizás mucho che_
+_**tom**: entiendo, pero no me conocés, no podes saber si no nos entenderíamos, generalizás mucho che_
 
 _**luci**: cierto, perdón._
 
-_**bob**: yo sinceramente no quiero generarle problemas a nadie, busco algo simple de una noche, y olvidarnos._
+_**tom**: yo sinceramente no quiero generarle problemas a nadie, busco algo simple de una noche, y olvidarnos._
 
 _**luci**: ay no._
 
-_**bob**: y ahora que hice mal?, jaja._
+_**tom**: y ahora que hice mal?, jaja._
 
 _**luci**: nada, la decepción, eras lindo, pero yo busco conocer gente, estoy muy sola y me cuesta demasiado relacionarme, no sirvo para noches sueltas, no lo quiero sinceramente, necesito apoyar mi cabeza en el hombro de alguien y dormirme así, una semana seguida al menos._
 
-_**bob**: ah, claro... alguien lindo para que te mime hasta que se te vayan las ganas. bueno, estamos en la misma._
+_**tom**: ah, claro... alguien lindo para que te mime hasta que se te vayan las ganas. bueno, estamos en la misma._
 
-_**bob**: bah, no se, yo no le pido tanto a nadie ni loco jaja, voy a suponer que era sarcasmo._
+_**tom**: bah, no se, yo no le pido tanto a nadie ni loco jaja, voy a suponer que era sarcasmo._
 
 _**luci**: era totalmente cierto._
 
-_**bob**: bueno, eso es sarcasmo?._
+_**tom**: bueno, eso es sarcasmo?._
 
 _**luci**: ya fue, que importa si fue sarcasmo._
 
-_**bob**: ay no._
+_**tom**: ay no._
 
 _**luci**: jajaja, mirá si va a ser cierto es bromita_ 🥺.
 
-_**bob**: bueno, ojalá._
+_**tom**: bueno, ojalá._
 
 # 2024-01-18 20:02
-## conversación entre lucy y bob (continuación)
+## conversación entre lucy y tom (continuación)
 
-_**bob**: al final no me hablaste mas._
+_**tom**: al final no me hablaste mas._
 
 _**luci**: ey hola._
 
 _**luci**: cierto, pasé como un día sin hablarte, quería que lo notes._
 
-_**bob**: no entiendo._
+_**tom**: no entiendo._
 
 _**luci**: nadie me entiende :-(._
 
-_**bob**: sos complicada._
+_**tom**: sos complicada._
 
 _**luci**: prefiero sofisticada._
 
-_**bob**: no se che, jaja._
+_**tom**: no se che, jaja._
 
 _**luci**: como que no?_
 
-_**bob**: bueno, no se, no te conozco tanto._
+_**tom**: bueno, no se, no te conozco tanto._
 
 _**luci**: pero te intereso, eh? 🥺_
 
-_**bob**: jajaja, un poco, ponele._
+_**tom**: jajaja, un poco, ponele._
 
-_**bob**: al final no me dijiste que buscás, bah, creo que no me lo dijiste_
+_**tom**: al final no me dijiste que buscás, bah, creo que no me lo dijiste_
 
 _**luci**: cierto, no entendiste cuando te dije_
 
 _**luci**: busco compañía. buena compañía que me haga sentir bien, estoy demasiado sola y me abruma la soledad_
 
-_**bob**: ah, ahora entiendo_
+_**tom**: ah, ahora entiendo_
 
-_**bob**: entonces era masomenos cierto lo que decías_
+_**tom**: entonces era masomenos cierto lo que decías_
 
 _**luci**: no, qsy, no descarto tener un encuentro  fugaz con alguien, mientras sea buena compañía y me haga sentir bien un rato_
 
@@ -345,6 +345,6 @@ Computadoras Giry: Unas computadoras que tienen componentes modulares diferentes
 Lucy: Trabaja para "Au", una corporación con muchas ramas, ella arregla computadoras Giry en una sucursal que vende electrónica.
 Sole: Trabaja para "Au", es desarrolladora en otra rama, es la programadora del chatbot.
 Chatbot: Un chatbot multiprop�sito, es utlizado por Lucy como compa��a y tiene acceso a mucha información de la corporaci�n Au
-Sergio: Potencial inter�s rom�ntico de lucy.
+Tom: Potencial inter�s rom�ntico de lucy.
 Molly: Hacker anarquista, trabaja para la cooperativa "An", un taller artesanal (tanto como se pueda) que moddea computadoras, es adem�s alta hacker.
 
