@@ -350,7 +350,7 @@ Lucy: Trabaja para "Au", una corporación con muchas ramas, ella arregla computa
 
 Sole: Trabaja para "Au", es desarrolladora en otra rama, es la programadora del chatbot.
 
-Chatbot: Un chatbot multipropósito, es utlizado por Lucy como compania y tiene acceso a mucha información de la corporaciÃn Au
+Chatbot: Un chatbot multipropósito de la clase Au.R.A (Au Response Automator), es utlizado por Lucy como compania y tiene acceso a mucha información de la corporaciÃn Au
 
 Tom: Potencial interés romántico de lucy.
 
