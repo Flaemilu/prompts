@@ -332,3 +332,19 @@ En la aplicaci√≥n de citas aparecen varios personajes, una que la invita a un es
 le responde que s√≠ cuando el chatbot la autoriza. Otro personaje es un burgu√©s interesado en una reliaci√≥n pasajera. El chatbot adora ese personaje y tiende a decirle a lily que 
 acepte sus avances. Hay un template de estos intereses amorosos que los va generando con nombres azarosos y todas las relaciones terminan en un ciclo de enamoramiento y duelo posterior que
 la encierra m√°s y m√°s. El objetivo del juego es acompa√±ar a lily y buscarle una salida.
+
+# 2025-04-11 15:23
+## ¬°El proyecto sigue en curso!
+
+Despu√s de una pausa para la facultad, ¬°vuelve prompst!
+
+Acabo de agregar dos im√genes, con los dise√os de la "dev"(ahora llamada sole) y de "lucy", son las im√genes "sole" y "farola" del directorio im√ges.
+
+Tambi√n pens√©un poco mejor la historia.
+Computadoras Giry: Unas computadoras que tienen componentes modulares diferentes a los actuales, son como bloques que se conectan con mangueras y no tienen electr√nica horrible a la vista. Tienen gabinetes de dise√±os muy diferentes, muchos de ellos artesanales.
+Lucy: Trabaja para "Au", una corporaci√≥n con muchas ramas, ella arregla computadoras Giry en una sucursal que vende electr√≥nica.
+Sole: Trabaja para "Au", es desarrolladora en otra rama, es la programadora del chatbot.
+Chatbot: Un chatbot multiprop√sito, es utlizado por Lucy como compa√√a y tiene acceso a mucha informaci√≥n de la corporaci√n Au
+Sergio: Potencial inter√s rom√ntico de lucy.
+Molly: Hacker anarquista, trabaja para la cooperativa "An", un taller artesanal (tanto como se pueda) que moddea computadoras, es adem√s alta hacker.
+
