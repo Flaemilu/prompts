@@ -354,5 +354,8 @@ Chatbot: Un chatbot multipropósito de la clase Au.R.A (Au Response Automator), 
 
 Tom: Potencial interés romántico de lucy.
 
-Molly: Hacker anarquista, trabaja para la cooperativa "An", un taller artesanal (tanto como se pueda) que moddea computadoras, es además alta hacker.
+Carla (AKA Trufa): Hacker anarquista, trabaja para la cooperativa "An", un taller artesanal (tanto como se pueda) que moddea computadoras, es además alta hacker.
 
+# 2025-04-12 22:56
+## Dibujo de trufa
+Agregué el dibujo de Carla. 
